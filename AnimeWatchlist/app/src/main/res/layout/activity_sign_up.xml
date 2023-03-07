@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:background="@color/SeaBlue">
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.156"
+        android:background="@drawable/rounded_edit_text_states"
+        android:gravity="center"
+        android:hint="firstname"
+        android:textColorHint="@color/Darkblue"
+        android:inputType="text"
+        android:textColor="@color/Darkblue"/>
+
+    <EditText
+        android:id="@+id/lname"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintLeft_toRightOf="@+id/fname"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.156"
+        android:background="@drawable/rounded_edit_text_states"
+        android:gravity="center"
+        android:hint="last name"
+        android:textColorHint="@color/Darkblue"
+        android:inputType="text"
+        android:textColor="@color/Darkblue"/>
+
+    <EditText
+        android:id="@+id/signup_Email"
+        android:layout_width="370dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313"
+        android:background="@drawable/rounded_edit_text_states"
+        android:gravity="center"
+        android:hint="Enter E-mail"
+        android:textColorHint="@color/Darkblue"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/Darkblue"/>
+
+    <EditText
+        android:id="@+id/confirm_Email"
+        android:layout_width="370dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.474"
+        android:background="@drawable/rounded_edit_text_states"
+        android:gravity="center"
+        android:hint="Re-Enter E-mail"
+        android:textColorHint="@color/Darkblue"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/Darkblue"/>
+
+    <EditText
+        android:id="@+id/signup_Password"
+        android:layout_width="370dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.632"
+        android:background="@drawable/rounded_edit_text_states"
+        android:gravity="center"
+        android:hint="Enter Password"
+        android:textColorHint="@color/Darkblue"
+        android:inputType="textPassword"
+        android:textColor="@color/Darkblue"/>
+
+    <EditText
+        android:id="@+id/confirm_Password"
+        android:layout_width="370dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.791"
+        android:background="@drawable/rounded_edit_text_states"
+        android:gravity="center"
+        android:hint="Re-Enter Password"
+        android:textColorHint="@color/Darkblue"
+        android:inputType="textPassword"
+        android:textColor="@color/Darkblue"/>
+
+    <Button
+        android:id="@+id/signUp_btn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="26dp"
+        android:text="SIGNUP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/confirm_Password"
+        app:layout_constraintVertical_bias="0.12"
+        android:backgroundTint="@color/Darkblue"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
