@@ -3,8 +3,11 @@ package com.example.animewatchlist.Modules;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.List;
 
 @Entity
 public class User {
@@ -22,4 +25,5 @@ public class User {
 
     @ColumnInfo(name="password")
     public String password;
+
 }
