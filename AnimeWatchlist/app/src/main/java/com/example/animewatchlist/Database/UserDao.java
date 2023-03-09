@@ -3,6 +3,7 @@ package com.example.animewatchlist.Database;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Transaction;
 
@@ -23,7 +24,7 @@ public interface UserDao {
     @Insert
     void insertUser(User user);
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAnime(Anime anime);
 
     @Insert

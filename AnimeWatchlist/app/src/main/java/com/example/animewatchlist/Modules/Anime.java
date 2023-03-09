@@ -8,14 +8,5 @@ import androidx.room.PrimaryKey;
 public class Anime {
     @NonNull
     @PrimaryKey(autoGenerate = false)
-    String name;
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @NonNull
-    public String getName() {
-        return name;
-    }
+    public String name;
 }

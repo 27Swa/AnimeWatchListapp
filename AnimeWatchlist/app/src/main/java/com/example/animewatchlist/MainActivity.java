@@ -27,27 +27,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         List<User> users = new ArrayList<>();
-        User usaar = new User();
-        usaar.uiD = 500;
-        usaar.password = "456465";
-        usaar.first_name = "john";
-        usaar.last_name = "Doe";
-        usaar.email = "user@user.com";
-        Anime anime1 = new Anime();
-        UserWithAnime u1 = new UserWithAnime();
-        anime1.setName("Attack On Titan");
-        u1.animeList.add(anime1);
-        AnimeWithUser a1 = new AnimeWithUser();
-        a1.userList.add(usaar);
-        UserAnimeRelation relation = new UserAnimeRelation();
-        relation.name = "Attack On Titan";
-        relation.userID = 500;
+
         AppDatabase db = AppDatabase.getDb(this);
         UserDao userDao = db.userDao();
         users.addAll(userDao.getAll());
-        userDao.insertAnime(anime1);
-        userDao.insertUser(usaar);
-        userDao.insertUserAnimeRelation(relation);
 
         //variables
         Button signInbtn = findViewById(R.id.sign_in_btn);
@@ -61,21 +44,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String inputEmail = email.getText().toString();
                 String inputPass = password.getText().toString();
+                boolean LoggedIn = true;
                 if(users.isEmpty()){
                     Toast.makeText(getApplicationContext() , "Sign up first!!" , Toast.LENGTH_SHORT).show();
                 }
                 for (User u:users)
                 {
+                    LoggedIn = true;
                     if(inputEmail.equals(u.email) && inputPass.equals(u.password)){
                         Intent loggedIn = new Intent(getApplicationContext() , Home.class);
                         Toast.makeText(getApplicationContext() , "Login Successful!!" , Toast.LENGTH_SHORT).show();
                         startActivity(loggedIn);
                         finish();
+                        break;
                     }
                     else{
-                        Toast.makeText(getApplicationContext() , "Wrong data!!" , Toast.LENGTH_SHORT).show();
+                        LoggedIn = false;
+                        //Toast.makeText(getApplicationContext() , "Wrong data!!" , Toast.LENGTH_SHORT).show();
                     }
                 }
+                if(!(LoggedIn))
+                    Toast.makeText(getApplicationContext() , "Wrong data!!" , Toast.LENGTH_SHORT).show();
 
             }
         });
