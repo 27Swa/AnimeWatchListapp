@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AnimeWatchlist"
         tools:targetApi="31">
         <activity
+            android:name=".AnimeWatchListRecyclerview"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity

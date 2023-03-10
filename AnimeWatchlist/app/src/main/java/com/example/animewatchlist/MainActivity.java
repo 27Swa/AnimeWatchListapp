@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     LoggedIn = true;
                     if(inputEmail.equals(u.email) && inputPass.equals(u.password)){
-                        Intent loggedIn = new Intent(getApplicationContext() , Home.class);
+                        Intent loggedIn = new Intent(getApplicationContext() , AnimeWatchListRecyclerview.class);
                         Toast.makeText(getApplicationContext() , "Login Successful!!" , Toast.LENGTH_SHORT).show();
                         startActivity(loggedIn);
                         finish();
