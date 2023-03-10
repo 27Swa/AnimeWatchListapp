@@ -19,4 +19,16 @@
         android:layout_marginHorizontal="10dp"
         android:textSize="16sp"
         android:gravity="center"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/remove_anime_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="@color/cardview_light_background"
+        android:layout_marginHorizontal="15dp"
+        app:fabCustomSize="30dp"
+        app:maxImageSize="30dp"
+        android:layout_gravity="right|center"
+        app:srcCompat="@drawable/baseline_delete_forever_24" />
 </androidx.cardview.widget.CardView>

@@ -1,13 +1,16 @@
 package com.example.animewatchlist;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.animewatchlist.Database.AppDatabase;
 import com.example.animewatchlist.Database.UserDao;
@@ -28,6 +31,7 @@ public class AnimeWatchListRecyclerview extends AppCompatActivity implements Add
     AppDatabase db = AppDatabase.getDb(this);
     UserDao userDao = db.userDao();
     int Uid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +41,18 @@ public class AnimeWatchListRecyclerview extends AppCompatActivity implements Add
         LoggedInUser = userDao.loadUserData(loggedInEmail);
         UserAnimes = userDao.getAnimewithuser(LoggedInUser.uiD);
         Uid = LoggedInUser.uiD;
+        Button BTNLogout=findViewById(R.id.logoutButton);
+        BTNLogout.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+
+                Intent logout=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(logout);
+                finish();
+
+            }
+        });
         FloatingActionButton addAnime=findViewById(R.id.watchlist_floating_action_button_id);
         addAnime.setOnClickListener(new View.OnClickListener() {
             @Override
