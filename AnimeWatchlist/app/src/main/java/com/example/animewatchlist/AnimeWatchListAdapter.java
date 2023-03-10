@@ -8,12 +8,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.animewatchlist.Modules.Anime;
+
 import java.util.List;
 
     public class AnimeWatchListAdapter extends RecyclerView.Adapter<AnimeWatchListAdapter.ViewHolder> {
-        List<AnimeWatchListRecyclerviewData> animeWatchListRecyclerviewData;
+        List<Anime> animeWatchListRecyclerviewData;
 
-        public AnimeWatchListAdapter(List<AnimeWatchListRecyclerviewData> animeWatchListRecyclerviewData) {
+        public AnimeWatchListAdapter(List<Anime> animeWatchListRecyclerviewData) {
             this.animeWatchListRecyclerviewData = animeWatchListRecyclerviewData;
         }
 
@@ -25,8 +27,8 @@ import java.util.List;
 
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            AnimeWatchListRecyclerviewData animeWatchListRecyclerviewData1= animeWatchListRecyclerviewData.get(position);
-            holder.animeWatchListTextView.setText(animeWatchListRecyclerviewData1.animeWatchListData);
+            Anime animeWatchListRecyclerviewData1= animeWatchListRecyclerviewData.get(position);
+            holder.animeWatchListTextView.setText(animeWatchListRecyclerviewData1.name);
 
         }
 

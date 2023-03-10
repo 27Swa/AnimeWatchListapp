@@ -3,9 +3,9 @@ package com.example.animewatchlist.Modules;
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 
-@Entity(primaryKeys = {"userID" , "name"})
+@Entity(primaryKeys = {"uiD" , "name"})
 public class UserAnimeRelation {
-    public int userID;
+    public int uiD;
     @NonNull
     public String name;
 }

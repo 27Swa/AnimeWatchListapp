@@ -10,6 +10,7 @@ import androidx.room.Transaction;
 import com.example.animewatchlist.Modules.Anime;
 import com.example.animewatchlist.Modules.User;
 import com.example.animewatchlist.Modules.UserAnimeRelation;
+import com.example.animewatchlist.Modules.UserWithAnime;
 
 import java.util.List;
 
@@ -33,13 +34,17 @@ public interface UserDao {
     @Delete
     void deleteUser(User user);
 
-    @Transaction
-    @Query("SELECT * FROM Anime WHERE  name= :animeName")
-    Anime getUserwithanime(String animeName);
+//    @Transaction
+//    @Query("SELECT * FROM Anime WHERE  name= :animeName")
+//    Anime getUserwithanime(String animeName);
+//
+//    @Transaction
+//    @Query("SELECT * FROM User WHERE uiD= :id")
+//    User getAnimewithuser(int id);
 
     @Transaction
     @Query("SELECT * FROM User WHERE uiD= :id")
-    User getAnimewithuser(int id);
+    UserWithAnime getAnimewithuser(int id);
 
     @Query("DELETE FROM User")
     void DeleteAll();

@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class AddAnimeDialouge extends AppCompatDialogFragment {
     private EditText addAnimeEditText;
-//    private AddAnimeDialogListener animeListener;
+    private AddAnimeDialogListener animeListener;
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -35,21 +35,22 @@ public class AddAnimeDialouge extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String addAnimeName=addAnimeEditText.getText().toString();
+                        animeListener.applyText(addAnimeName);
                     }
                 });
         addAnimeEditText=view.findViewById(R.id.add_anime_id);
         return builder.create();
     }
 
-//    @Override
-//    public void onAttach(@NonNull Context context) {
-//        super.onAttach(context);
-//        try {
-//            animeListener=(AddAnimeDialogListener)context;
-//        } catch (ClassCastException e) {
-//            throw new ClassCastException(context.toString()+"must implement add anime dialogue");
-//        }
-//    }
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            animeListener=(AddAnimeDialogListener)context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString()+"must implement add anime dialogue");
+        }
+    }
 
     public interface AddAnimeDialogListener
     {

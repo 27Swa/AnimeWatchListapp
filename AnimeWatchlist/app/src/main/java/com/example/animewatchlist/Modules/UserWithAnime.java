@@ -7,9 +7,9 @@ import androidx.room.Relation;
 import java.util.List;
 
 public class UserWithAnime {
-    @Embedded User user;
+    @Embedded public User user;
     @Relation(
-            parentColumn = "userID" ,
+            parentColumn = "uiD" ,
             entityColumn = "name" ,
             associateBy = @Junction(UserAnimeRelation.class)
     )

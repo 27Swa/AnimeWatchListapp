@@ -7,10 +7,10 @@ import androidx.room.Relation;
 import java.util.List;
 
 public class AnimeWithUser {
-    @Embedded Anime anime;
+    @Embedded public Anime anime;
     @Relation(
             parentColumn = "name",
-            entityColumn = "userID" ,
+            entityColumn = "uiD" ,
             associateBy = @Junction(UserAnimeRelation.class)
     )
     public List<User> userList;
