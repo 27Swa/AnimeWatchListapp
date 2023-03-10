@@ -34,6 +34,9 @@ public interface UserDao {
     @Delete
     void deleteUser(User user);
 
+    @Delete
+    void deleteUserAnimeRelation(UserAnimeRelation uar);
+
 //    @Transaction
 //    @Query("SELECT * FROM Anime WHERE  name= :animeName")
 //    Anime getUserwithanime(String animeName);

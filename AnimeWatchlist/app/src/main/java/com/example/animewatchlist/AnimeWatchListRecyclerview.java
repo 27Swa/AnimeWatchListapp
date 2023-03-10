@@ -47,9 +47,27 @@ public class AnimeWatchListRecyclerview extends AppCompatActivity implements Add
             @Override
             public void onClick(View view) {
 
-                Intent logout=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(logout);
-                finish();
+//                Intent logout=new Intent(getApplicationContext(),MainActivity.class);
+//                startActivity(logout);
+//                finish();
+                AlertDialog alertDialog = new AlertDialog.Builder(AnimeWatchListRecyclerview.this).create();
+                alertDialog.setTitle("Log out!");
+                alertDialog.setMessage("Are you sure you want to log out?");
+                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent logout=new Intent(getApplicationContext(),MainActivity.class);
+                        startActivity(logout);
+                        finish();
+                    }
+                });
+                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                alertDialog.show();
 
             }
         });
@@ -64,7 +82,7 @@ public class AnimeWatchListRecyclerview extends AppCompatActivity implements Add
 //        List<AnimeWatchListRecyclerviewData> d=new ArrayList<>();
 //        d.add(new AnimeWatchListRecyclerviewData("Ffdf"));
 //        d.add(new AnimeWatchListRecyclerviewData("dgsgs"));
-        AnimeWatchListAdapter animeWatchListAdapter =new AnimeWatchListAdapter(UserAnimes.animeList);
+        AnimeWatchListAdapter animeWatchListAdapter =new AnimeWatchListAdapter(UserAnimes.animeList , LoggedInUser);
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
         recyclerView.setAdapter(animeWatchListAdapter);
         recyclerView.setLayoutManager(layoutManager);
