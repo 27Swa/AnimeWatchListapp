@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
-    android:background="@color/SeaBlue">
+    android:background="@color/BlueJeans">
 
     <ImageView
         android:id="@+id/Splashlogo"
@@ -24,7 +24,7 @@
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:indeterminate="true"
-        android:indeterminateTint="@color/Darkblue"
+        android:indeterminateTint="@color/darkLogoColor"
         android:indeterminateTintMode="src_atop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

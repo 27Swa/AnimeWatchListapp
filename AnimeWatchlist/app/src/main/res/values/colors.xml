@@ -11,4 +11,16 @@
     <color name="SeaBlue">#2D8EE5</color>
     <color name="SkyBlue">#00b4d8</color>
     <color name="BabyBlue">#90e0ef</color>
+<!--    added colors-->
+    <color name="CrystalBlue">#5CB3FF</color>
+    <color name="BrightNavyBlue">#1974D2</color>
+    <color name="someTempOfBlue">#00609C</color>
+    <color name="DaySkyBlue">#82CAFF</color>
+    <color name="BlueGray">#98AFC7</color>
+    <color name="BlueJeans">#4299e8</color>
+    <color name="HopiBlueCorn">#1D8eE5</color>
+    <color name="logoColor">#2087e3</color>
+    <color name="darkLogoColor">#0b5495</color>
+    <color name="darkDarklogoColor">#105c9f</color>
+    <color name="lightblue">#81bbef</color>
 </resources>

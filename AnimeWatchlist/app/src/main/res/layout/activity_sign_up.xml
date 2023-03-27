@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUpActivity"
-    android:background="@color/SeaBlue">
+    android:background="@color/BlueJeans">
 
     <EditText
         android:id="@+id/fname"
@@ -20,9 +20,9 @@
         android:background="@drawable/rounded_edit_text_states"
         android:gravity="center"
         android:hint="firstname"
-        android:textColorHint="@color/Darkblue"
+        android:textColorHint="@color/darkLogoColor"
         android:inputType="text"
-        android:textColor="@color/Darkblue"/>
+        android:textColor="@color/darkLogoColor"/>
 
     <EditText
         android:id="@+id/lname"
@@ -37,9 +37,9 @@
         android:background="@drawable/rounded_edit_text_states"
         android:gravity="center"
         android:hint="last name"
-        android:textColorHint="@color/Darkblue"
+        android:textColorHint="@color/darkLogoColor"
         android:inputType="text"
-        android:textColor="@color/Darkblue"/>
+        android:textColor="@color/darkLogoColor"/>
 
     <EditText
         android:id="@+id/signup_Email"
@@ -53,9 +53,9 @@
         android:background="@drawable/rounded_edit_text_states"
         android:gravity="center"
         android:hint="Enter E-mail"
-        android:textColorHint="@color/Darkblue"
+        android:textColorHint="@color/darkLogoColor"
         android:inputType="textEmailAddress"
-        android:textColor="@color/Darkblue"/>
+        android:textColor="@color/darkLogoColor"/>
 
     <EditText
         android:id="@+id/confirm_Email"
@@ -69,9 +69,9 @@
         android:background="@drawable/rounded_edit_text_states"
         android:gravity="center"
         android:hint="Re-Enter E-mail"
-        android:textColorHint="@color/Darkblue"
+        android:textColorHint="@color/darkLogoColor"
         android:inputType="textEmailAddress"
-        android:textColor="@color/Darkblue"/>
+        android:textColor="@color/darkLogoColor"/>
 
     <EditText
         android:id="@+id/signup_Password"
@@ -85,9 +85,9 @@
         android:background="@drawable/rounded_edit_text_states"
         android:gravity="center"
         android:hint="Enter Password"
-        android:textColorHint="@color/Darkblue"
+        android:textColorHint="@color/darkLogoColor"
         android:inputType="textPassword"
-        android:textColor="@color/Darkblue"/>
+        android:textColor="@color/darkLogoColor"/>
 
     <EditText
         android:id="@+id/confirm_Password"
@@ -101,9 +101,9 @@
         android:background="@drawable/rounded_edit_text_states"
         android:gravity="center"
         android:hint="Re-Enter Password"
-        android:textColorHint="@color/Darkblue"
+        android:textColorHint="@color/darkLogoColor"
         android:inputType="textPassword"
-        android:textColor="@color/Darkblue"/>
+        android:textColor="@color/darkLogoColor"/>
 
     <Button
         android:id="@+id/signUp_btn"
@@ -117,5 +117,5 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/confirm_Password"
         app:layout_constraintVertical_bias="0.12"
-        android:backgroundTint="@color/Darkblue"/>
+        android:backgroundTint="@color/darkLogoColor"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
